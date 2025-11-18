@@ -1,3 +1,5 @@
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -63,41 +65,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <Icon name="GraduationCap" size={20} className="text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold">EduPlatform</span>
-          </Link>
-          
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/courses" className="text-sm font-medium hover:text-primary transition-colors">
-              Каталог курсов
-            </Link>
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-              О платформе
-            </Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Контакты
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link to="/profile">
-              <Button variant="ghost" size="sm">
-                Войти
-              </Button>
-            </Link>
-            <Link to="/courses">
-              <Button size="sm">
-                Начать учиться
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/20">

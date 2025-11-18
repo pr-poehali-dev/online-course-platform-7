@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 export const Footer = () => {
@@ -19,19 +20,19 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Платформа</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#catalog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses" className="text-muted-foreground hover:text-primary transition-colors">
                   Каталог курсов
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   О нас
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
-                </a>
+                <Link to="/profile" className="text-muted-foreground hover:text-primary transition-colors">
+                  Личный кабинет
+                </Link>
               </li>
             </ul>
           </div>
@@ -40,9 +41,9 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Помощь</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Контакты
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
