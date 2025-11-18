@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -97,41 +99,7 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <Icon name="GraduationCap" size={20} className="text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold">EduPlatform</span>
-          </Link>
-          
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/courses" className="text-sm font-medium text-primary">
-              Каталог курсов
-            </Link>
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-              О платформе
-            </Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Контакты
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link to="/profile">
-              <Button variant="ghost" size="sm">
-                Войти
-              </Button>
-            </Link>
-            <Link to="/courses">
-              <Button size="sm">
-                Начать учиться
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         <section className="py-12 bg-gradient-to-b from-background to-secondary/20">
@@ -258,79 +226,7 @@ const Courses = () => {
         </section>
       </main>
 
-      <footer className="bg-card border-t py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                  <Icon name="GraduationCap" size={20} className="text-primary-foreground" />
-                </div>
-                <span className="text-xl font-bold">EduPlatform</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Современная платформа для онлайн-обучения с сертификацией
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-3">Курсы</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link to="/courses" className="hover:text-foreground transition-colors">Каталог</Link></li>
-                <li><Link to="/courses?filter=popular" className="hover:text-foreground transition-colors">Популярные</Link></li>
-                <li><Link to="/courses?filter=new" className="hover:text-foreground transition-colors">Новинки</Link></li>
-                <li><Link to="/courses?filter=free" className="hover:text-foreground transition-colors">Бесплатные</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-3">О платформе</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link to="/about" className="hover:text-foreground transition-colors">О нас</Link></li>
-                <li><Link to="/teachers" className="hover:text-foreground transition-colors">Преподаватели</Link></li>
-                <li><Link to="/reviews" className="hover:text-foreground transition-colors">Отзывы</Link></li>
-                <li><Link to="/blog" className="hover:text-foreground transition-colors">Блог</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-3">Контакты</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <Icon name="Mail" size={16} />
-                  <a href="mailto:info@eduplatform.ru" className="hover:text-foreground transition-colors">
-                    info@eduplatform.ru
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Icon name="Phone" size={16} />
-                  <a href="tel:+78001234567" className="hover:text-foreground transition-colors">
-                    +7 (800) 123-45-67
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Icon name="MapPin" size={16} />
-                  <span>Москва, Россия</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © 2024 EduPlatform. Все права защищены.
-            </p>
-            <div className="flex gap-4">
-              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Политика конфиденциальности
-              </Link>
-              <Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Условия использования
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
